@@ -12,6 +12,18 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Your solution(s) to exercise001 here!
+async function doPromise() {
+  try {
+    const resolve = await promise;
+    console.log(`Yay! Promise resolved with response: ${resolve}`);
+  } catch (reject) {
+    console.log(`Boo. Promise rejected with response: ${reject}`);
+  }
+}
+
+doPromise();
+
+/*
 promise
   .then((resolve) =>
     console.log(`Yay! Promise resolved with response: ${resolve}`)
@@ -19,3 +31,4 @@ promise
   .catch((reject) =>
     console.log(`Boo. Promise rejected with response: ${reject}`)
   );
+*/
