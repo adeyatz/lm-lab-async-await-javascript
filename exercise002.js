@@ -9,7 +9,7 @@ const fetchData = (apiEndPoint) => {
     .catch((error) => console.log(error));
 };
 
-async function fetchMyData(apiEndPoint) {
+const fetchMyData = async (apiEndPoint) => {
   try {
     const response = await fetch(apiEndPoint);
     const json = await response.json();
@@ -17,7 +17,7 @@ async function fetchMyData(apiEndPoint) {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 //fetchData(jsonTypicode);
 fetchMyData(jsonTypicode);
