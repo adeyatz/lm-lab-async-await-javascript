@@ -12,14 +12,14 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Your solution(s) to exercise001 here!
-async function doPromise() {
+const doPromise = async () => {
   try {
     const resolve = await promise;
     console.log(`Yay! Promise resolved with response: ${resolve}`);
   } catch (reject) {
     console.log(`Boo. Promise rejected with response: ${reject}`);
   }
-}
+};
 
 doPromise();
 
